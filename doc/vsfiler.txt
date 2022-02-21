@@ -1,0 +1,76 @@
+                      $$$$$$\  $$\ $$\                     
+                     $$  __$$\ \__|$$ |                    
+$$\    $$\  $$$$$$$\ $$ /  \__|$$\ $$ | $$$$$$\   $$$$$$\  
+\$$\  $$  |$$  _____|$$$$\     $$ |$$ |$$  __$$\ $$  __$$\ 
+ \$$\$$  / \$$$$$$\  $$  _|    $$ |$$ |$$$$$$$$ |$$ |  \__|
+  \$$$  /   \____$$\ $$ |      $$ |$$ |$$   ____|$$ |      
+   \$  /   $$$$$$$  |$$ |      $$ |$$ |\$$$$$$$\ $$ |      
+    \_/    \_______/ \__|      \__|\__| \_______|\__|      
+                                                           
+                                                           
+                                                           
+
+  
+*vsfiler.txt* vsfiler: Minimal File Explorer
+Author: Mr-peipei <wushumenmenmen2@gmail.com>
+License: MIT license
+
+==============================================================================
+CONTENTS                                                 *vsfiler-constents*
+
+INTRODUCTION			|vsfiler-introduction|
+  FEATURES				|vsfiler-features|
+  INSTALL				|vsfiler-install|
+USAGE					|vsfiler-usage|
+  ACTION				|vsfiler-action|
+  CUSTOM				|vsfiler-custom|
+
+==============================================================================
+INTRODUCTION                                               *vsfiler-introduction*
+
+*vsfiler.vim* is a vsplit explorer written in pure Vim script. 
+It provides "file" scheme in default to use it as a file explorer.
+
+------------------------------------------------------------------------------
+FEATURES                                                   *vsfiler-features*
+
+Light ~
+   
+Easy to remember keymappings ~
+
+Intuitive ~
+
+------------------------------------------------------------------------------
+INSTALL                                                   *vsfiler-install*
+
+If you use vim plugin tool, add below command in your vimrc
+>
+ Plugin 'Mr-peipei/vsfiler'
+<
+ Run :PluginInstall
+
+NeoBundle: add below to .vimrc
+>
+ NeoBundle 'Mr-peipei/vsfiler'
+<
+ Run :NeoBundleInstall
+
+vim-plug: add below to .vimrc
+>
+ Plug 'Mr-peipei/vsfiler' to .vimrc
+<
+ Run :PlugInstall
+
+
+==============================================================================
+USAGE                                                       *vsfiler-usage*
+
+------------------------------------------------------------------------------
+KEYMAPPINGS                                                 *vsfiler-keymappings*
+
+* "l": Go up parent directory. <plug>(vsfiler-up)
+* "h" on file: Open the file on existing Vim. <plug>(vsfiler-open)
+* "h" on directory: Go to the directory. <plug>(vsfiler-open)
+
+==============================================================================
+vim:tw=78:ts=8:ft=help:norl:noet:fen:fdl=0:
