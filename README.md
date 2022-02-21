@@ -4,9 +4,9 @@
 
 ## Concept
 
-This filer is so light and intuitive.
-You don't have to remember too many keemapings.
-This filer will deliver the simplest vertically divided filer in the world.
+This filer is so light and intuitive.  
+You don't have to remember too many keemapings.  
+This filer will deliver the simplest vertically divided filer in the world.  
 
 ## Installation
 
