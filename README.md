@@ -2,7 +2,11 @@
 
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-## Usage
+## Concept
+
+This filer is so light and intuitive.
+You don't have to remember too many keemapings.
+This filer will deliver the simplest vertically divided filer in the world.
 
 ## Installation
 
@@ -80,3 +84,8 @@ vim -u NONE -c "helptags ~/.vim/pack/vendor/start/vsfiler.vim/doc" -c q
 
 ## Usaga
 
+
+## INSPIRED
+
+This vim plugin is inspire by [mattn/vim-molder](https://github.com/mattn/vim-molder)
+Thank you for your oss contribution.
