@@ -14,7 +14,7 @@ function! s:name(base, v) abort
 endfunction
 
 
-function! peifiler#init() abort
+function! vsfiler#init() abort
     let l:path = resolve(expand('%:p'))
     if !isdirectory(l:path)
         return 
@@ -26,7 +26,7 @@ function! peifiler#init() abort
 
     let b:now_dir = l:dir
     setlocal modifiable
-    setlocal filetype=peifiler buftype=nofile bufhidden=unload nobuflisted noswapfile
+    setlocal filetype=vsfiler buftype=nofile bufhidden=unload nobuflisted noswapfile
     setlocal nowrap cursorline
 
     " s:nameに{'type': 'file', 'name': 'filename'}の形で渡す
@@ -43,7 +43,7 @@ function! peifiler#init() abort
 
 endfunction
 
-function! peifiler#openv() abort
+function! vsfiler#openv() abort
     let l:path = resolve(expand('%:p:h'))
     " if !isdirectory(l:path)
     "     return 
@@ -58,7 +58,7 @@ function! peifiler#openv() abort
     vertical-resize 40
     let b:now_dir = l:dir
     setlocal modifiable
-    setlocal filetype=peifiler buftype=nofile bufhidden=unload nobuflisted noswapfile
+    setlocal filetype=vsfiler buftype=nofile bufhidden=unload nobuflisted noswapfile
     setlocal nowrap cursorline
     let l:files=map(readdir(l:path, '1'), {_, v-> s:name(l:dir, {'type': getftype(l:dir .. '/' .. v), 'name':v})})
     silent keepmarks keepjumps call setline(1, l:files)
@@ -67,7 +67,7 @@ function! peifiler#openv() abort
 endfunction
 
 
-function! peifiler#open() abort
+function! vsfiler#open() abort
   let l:edit_dir = b:now_dir .. substitute(getline('.'), '/$', '', '')
   if isdirectory(l:edit_dir)
     exe 'edit' fnameescape(l:edit_dir)
@@ -80,7 +80,7 @@ function! peifiler#open() abort
 endfunction
 
 
-function! peifiler#up() abort
+function! vsfiler#up() abort
   let l:dir = substitute(b:now_dir, '/$', '', '')
   let l:name = fnamemodify(l:dir, ':t:gs!\!/!')
   if empty(l:name)
@@ -92,7 +92,7 @@ function! peifiler#up() abort
 endfunction
 
 
-function! peifiler#close() abort
+function! vsfiler#close() abort
   call win_gotoid(s:filerwinid)
   quit
 endfunction

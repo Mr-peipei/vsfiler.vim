@@ -1,8 +1,8 @@
 
-command! PeiFiler call peifiler#init()
-command! PeiFilerv call peifiler#openv()
+command! PeiFiler call vsfiler#init()
+command! PeiFilerv call vsfiler#openv()
 
-nnoremap <silent><C-m> :<c-u>call peifiler#openv()<cr>
+nnoremap <silent><C-m> :<c-u>call vsfiler#openv()<cr>
 
 
 function! s:shutup_netrw() abort
@@ -14,8 +14,8 @@ function! s:shutup_netrw() abort
   endif
 endfunction
 
-augroup _peifiler_
+augroup _vsfiler_
   autocmd!
   autocmd VimEnter * call s:shutup_netrw()
-  autocmd BufEnter * call peifiler#init()
+  autocmd BufEnter * call vsfiler#init()
 augroup END
