@@ -97,7 +97,11 @@ function! vsfiler#close() abort
 endfunction
 
 function! vsfiler#reload() abort
-  edit
+  exe 'edit' fnameescape(b:now_dir)
+endfunction
+
+function! vsfiler#curdir() abort
+  return get(b:, 'now_dir', '')
 endfunction
 
 function! vsfiler#error(msg) abort
@@ -110,7 +114,7 @@ endfunction
 function! vsfiler#newdir() abort
   let l:name = input('Create directory: ')
   try
-    if mkdir(b:now_dir .. l:name) ==# 0
+    if mkdir(vsfiler#curdir() .. l:name) ==# 0
       throw 'failed'
     endif 
   catch
