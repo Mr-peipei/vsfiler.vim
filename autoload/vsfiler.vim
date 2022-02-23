@@ -91,8 +91,31 @@ function! vsfiler#up() abort
   call search('\v^\V' .. escape(l:name, '\') .. '/\v$', 'c')
 endfunction
 
-
 function! vsfiler#close() abort
   call win_gotoid(s:filerwinid)
   quit
+endfunction
+
+function! vsfiler#reload() abort
+  edit
+endfunction
+
+function! vsfiler#error(msg) abort
+  redraw
+  echohl Error
+  echomsg a:msg
+  echohl None
+endfunction
+
+function! vsfiler#newdir() abort
+  let l:name = input('Create directory: ')
+  try
+    if mkdir(b:now_dir .. l:name) ==# 0
+      throw 'failed'
+    endif 
+  catch
+    call vsfiler#error('Create directory filed')
+    return
+  endtry
+  call vsfiler#reload()
 endfunction
