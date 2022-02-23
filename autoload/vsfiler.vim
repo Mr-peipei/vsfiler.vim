@@ -55,7 +55,7 @@ function! vsfiler#openv() abort
     let s:buf=bufnr('%')
     let s:winid=win_getid()
     topleft vnew     
-    vertical-resize 40
+    vertical-resize 30
     let b:now_dir = l:dir
     setlocal modifiable
     setlocal filetype=vsfiler buftype=nofile bufhidden=unload nobuflisted noswapfile
@@ -112,9 +112,9 @@ function! vsfiler#error(msg) abort
 endfunction
 
 function! vsfiler#newdir() abort
-  let l:name = input('Create directory: ')
+  let l:name = input('New directory: ')
   try
-    if mkdir(vsfiler#curdir() .. l:name) ==# 0
+    if (vsfiler#curdir() .. l:name) ==# 0
       throw 'failed'
     endif 
   catch
@@ -123,3 +123,51 @@ function! vsfiler#newdir() abort
   endtry
   call vsfiler#reload()
 endfunction
+
+function! vsfiler#newfile() abort
+  let l:name = input('New file: ')
+  try
+    call win_gotoid(s:winid)
+    exe 'edit' vsfiler#curdir() ..l:name
+    write
+  catch
+    call vsfiler#error('Create file filed')
+    return
+  endtry
+  call win_gotoid(s:filerwinid)
+  call vsfiler#reload()
+  call win_gotoid(s:winid)
+endfunction
+
+
+function! vsfiler#delete() abort
+  let l:name = getline('.')
+  if confirm('Delete?: ' .. l:name, "&Y\n&n\n", 2) ==# 2
+    return
+  endif
+  let l:path = vsfiler#curdir() .. l:name
+  if isdirectory(l:path)
+    try
+      if delete(l:path, 'rf') == -1
+        throw 'failed'
+      endif
+    catch
+      call vsfiler#error('Delete directory failed')
+      return
+    endtry
+    echo 'Delete successful'
+  else
+    try
+      if delete(l:path) == -1
+        throw 'failed'
+      endif
+    catch
+      call vsfiler#error('Delete directory failed')
+      return
+    endtry
+  endif
+  call vsfiler#reload()
+endfunction
+
+
+

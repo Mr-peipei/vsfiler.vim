@@ -87,5 +87,5 @@ vim -u NONE -c "helptags ~/.vim/pack/vendor/start/vsfiler.vim/doc" -c q
 
 ## INSPIRED
 
-This vim plugin is inspire by [mattn/vim-molder](https://github.com/mattn/vim-molder)
-Thank you for your oss contribution.
+This vim plugin is inspire by [mattn/vim-molder](https://github.com/mattn/vim-molder) and [lambdalisue/fern.vim](https://github.com/lambdalisue/fern.vim)
+Thank you for yours oss contribution.
