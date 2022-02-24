@@ -84,6 +84,22 @@ vim -u NONE -c "helptags ~/.vim/pack/vendor/start/vsfiler.vim/doc" -c q
 
 ## Usaga
 
+Keymapping is so simple.
+Below is the default keymappings.
+
+```
+nnoremap <silent><C-m> :<c-u>call vsfiler#initv()<cr>
+
+if !hasmapto('<plug>(vsfiler-open)')
+  nmap <buffer> l <plug>(vsfiler-open)
+  nmap <buffer> h <plug>(vsfiler-up)
+  nmap <buffer> K <plug>(vsfiler-newdir)
+  nmap <buffer> N <plug>(vsfiler-newfile)
+  nmap <buffer> D <plug>(vsfiler-deletedir)
+  nmap <buffer> <C-m> <plug>(vsfiler-close)
+endif
+
+```
 
 ## INSPIRED
 
