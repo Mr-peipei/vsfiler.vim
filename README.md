@@ -8,6 +8,10 @@ This filer is so light and intuitive.
 You don't have to remember too many keemapings.  
 This filer will deliver the simplest vertically divided filer in the world.  
 
+## Images
+
+![Screenshot_20220224_205900](https://user-images.githubusercontent.com/54967427/155520021-cd4b5c52-3f3a-4055-be1d-ae3b8ebc7efb.png)
+
 ## Installation
 
 Use your favorite plugin manager to install this plugin. [tpope/vim-pathogen](https://github.com/tpope/vim-pathogen), [VundleVim/Vundle.vim](https://github.com/VundleVim/Vundle.vim), [junegunn/vim-plug](https://github.com/junegunn/vim-plug), and [Shougo/dein.vim](https://github.com/Shougo/dein.vim) are some of the more popular ones. A lengthy discussion of these and other managers can be found on [vi.stackexchange.com](https://vi.stackexchange.com/questions/388/what-is-the-difference-between-the-vim-plugin-managers). Basic instructions are provided below, but please **be sure to read, understand, and follow all the safety rules that come with your ~~power tools~~ plugin manager.**
