@@ -88,7 +88,7 @@ vim -u NONE -c "helptags ~/.vim/pack/vendor/start/vsfiler.vim/doc" -c q
 
 ## Usaga
 
-Keymapping is so simple.
+Keymapping is so simple.  
 Below is the default keymappings.
 
 ```
@@ -107,5 +107,5 @@ endif
 
 ## INSPIRED
 
-This vim plugin is inspire by [mattn/vim-molder](https://github.com/mattn/vim-molder) and [lambdalisue/fern.vim](https://github.com/lambdalisue/fern.vim)
+This vim plugin is inspire by [mattn/vim-molder](https://github.com/mattn/vim-molder) and [lambdalisue/fern.vim](https://github.com/lambdalisue/fern.vim)  
 Thank you for yours oss contribution.
