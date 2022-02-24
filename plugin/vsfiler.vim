@@ -1,8 +1,8 @@
 
 command! PeiFiler call vsfiler#init()
-command! PeiFilerv call vsfiler#openv()
+command! PeiFilerv call vsfiler#initv()
 
-nnoremap <silent><C-m> :<c-u>call vsfiler#openv()<cr>
+nnoremap <silent><C-m> :<c-u>call vsfiler#initv()<cr>
 
 
 function! s:shutup_netrw() abort
